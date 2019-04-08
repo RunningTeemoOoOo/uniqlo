@@ -50,6 +50,18 @@ header {
   width: 100%;
 }
 
+header .sec_list_cover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: 1;
+  display: none;
+}
+
 header .top {
   height: 47px;
   width: 100%;
@@ -105,6 +117,12 @@ header .top ul li:last-of-type {
 
 header .top ul li:last-of-type span {
   cursor: pointer;
+}
+
+header nav {
+  position: relative;
+  z-index: 2;
+  background: white;
 }
 
 header nav .left li {
@@ -189,6 +207,13 @@ header .sec_list {
   position: relative;
   margin-top: 24px;
   z-index: 10;
+}
+
+header .sec_list .sec_list_ul > li {
+  background: white;
+  z-index: 2;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
 
 header .sec_list .sec_list_ul {
