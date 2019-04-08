@@ -131,6 +131,12 @@ header nav .left li:first-of-type {
   background: url("./../resource/imgs/LOGO.gif") no-repeat;
 }
 
+header nav .left li:first-of-type a {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
 header nav .left li:nth-of-type(2) {
   border: none;
 }
@@ -177,4 +183,116 @@ header nav .right li:nth-of-type(6) {
 
 header nav .right li:nth-of-type(6) a {
   border: none;
+}
+
+header .sec_list {
+  position: relative;
+  margin-top: 24px;
+  z-index: 10;
+}
+
+header .sec_list .sec_list_ul {
+  position: relative;
+}
+
+header .sec_list .sec_list_ul .show {
+  display: block;
+}
+
+header .sec_list .sec_list_ul li {
+  display: none;
+  height: 500px;
+  width: 1280px;
+  position: absolute;
+  top: 0;
+}
+
+header .sec_list .sec_list_ul li .sec_list_left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 945px;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part {
+  width: 280px;
+  height: 154px;
+  font-size: 12px;
+  color: #7f7f7f;
+  padding: 0 35px 0 0;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part dt {
+  height: 28px;
+  font-size: 14px;
+  color: red;
+  text-align: left;
+  line-height: 28px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part div {
+  width: 100%;
+  margin-top: 15px;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part dd {
+  margin-top: 15px;
+  width: 140px;
+  box-sizing: border-box;
+  float: left;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part dd:nth-of-type(2n) {
+  border-left: 1px dashed;
+  padding-left: 10px;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part a {
+  color: #7f7f7f;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part a:hover {
+  color: red;
+}
+
+header .sec_list .sec_list_ul .sec_list_part:nth-of-type(3n) {
+  padding-right: 0;
+}
+
+header .sec_list .sec_list_ul .sec_list_right .sec_list_part {
+  padding: 0;
+  height: 500px;
+}
+
+header .sec_list .sec_list_ul .sec_list_right .sec_list_part img {
+  width: 325px;
+  padding: 13px 0;
+}
+
+header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul {
+  width: 315px;
+  height: 224px;
+}
+
+header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul li {
+  display: block;
+  width: 315px;
+  height: 18px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+}
+
+header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul li a {
+  padding-left: 5px;
+}
+
+header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul li:hover {
+  background: red;
+}
+
+header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul li:hover a {
+  color: white;
 }
