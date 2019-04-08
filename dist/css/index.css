@@ -243,6 +243,22 @@ header .sec_list .sec_list_ul li .sec_list_part dd {
   float: left;
 }
 
+header .sec_list .sec_list_ul li .sec_list_part dd.hot a:after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 13px;
+  background: url("../resource/imgs/hot_flg.png") no-repeat 5px 0;
+}
+
+header .sec_list .sec_list_ul li .sec_list_part dd.new a:after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 13px;
+  background: url("../resource/imgs/new_flg.png") no-repeat 5px 0;
+}
+
 header .sec_list .sec_list_ul li .sec_list_part dd:nth-of-type(2n) {
   border-left: 1px dashed;
   padding-left: 10px;
