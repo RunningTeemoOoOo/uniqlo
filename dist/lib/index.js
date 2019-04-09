@@ -59,10 +59,11 @@
     auto();
     var $nextBtn = $('main .notice_carousel .notice_carousel_next');
     var $prevBtn = $('main .notice_carousel .notice_carousel_prev');
+    var $noticeCarousel = $('main .notice_carousel');
     $nextBtn.on('click', slideNext);
     $prevBtn.on('click', slidePrev);
-    $noticeCarouselUl.on('mouseover', stop);
-    $noticeCarouselUl.on('mouseout', auto);
+    $noticeCarousel.on('mouseover', stop);
+    $noticeCarousel.on('mouseout', auto);
   }
 
   function bigCarouse() {

@@ -436,3 +436,42 @@ main .carousel .pagination li {
 main .carousel .pagination li.focus {
   background: #606060;
 }
+
+main .smallNav {
+  height: 155px;
+}
+
+main .smallNav ul li {
+  width: 320px;
+  box-sizing: border-box;
+  float: left;
+}
+
+main .smallNav ul li p {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 29px;
+  border-right: 1px solid #dadada;
+}
+
+main .smallNav ul li .smallNav_navs {
+  text-align: center;
+  padding-top: 30px;
+}
+
+main .smallNav ul li .smallNav_navs span {
+  margin-left: 20px;
+  padding: 5px 0;
+  border-bottom: 2px solid #dadada;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+main .smallNav ul li .smallNav_navs span:first-of-type {
+  margin-left: 0;
+}
+
+main .smallNav ul li:last-of-type p {
+  border: none;
+}
