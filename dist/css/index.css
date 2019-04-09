@@ -373,3 +373,66 @@ main .notice_carousel .notice_carousel_prev {
   z-index: 5;
   background: #fe0000;
 }
+
+main .carousel {
+  margin-top: 8px;
+  height: 622px;
+  position: relative;
+}
+
+main .carousel .ulList {
+  height: 570px;
+  overflow: hidden;
+  position: relative;
+}
+
+main .carousel .ulList .list {
+  position: absolute;
+  transition: .5s;
+  width: 10240px;
+  left: -1280px;
+}
+
+main .carousel .ulList .list li {
+  float: left;
+  width: 1280px;
+}
+
+main .carousel .carousel_prev {
+  position: absolute;
+  z-index: 5;
+  top: 260px;
+  left: -32px;
+  cursor: pointer;
+}
+
+main .carousel .carousel_next {
+  position: absolute;
+  z-index: 5;
+  top: 260px;
+  right: -32px;
+  cursor: pointer;
+}
+
+main .carousel .pagination {
+  width: 120px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  margin: 0 auto;
+}
+
+main .carousel .pagination li {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #d1d1d1;
+  margin: 0 6px;
+  float: left;
+  cursor: pointer;
+}
+
+main .carousel .pagination li.focus {
+  background: #606060;
+}

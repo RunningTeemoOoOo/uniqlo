@@ -34,7 +34,8 @@
         right: '0',
         margin: '0 auto',
         background: 'rgba(255, 255, 255, 0.5)',
-        width: '1280px'
+        width: '1280px',
+        zIndex: '10'
       });
     } else {
       $hearerTop.css({
