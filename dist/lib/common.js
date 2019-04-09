@@ -18,6 +18,7 @@
     });
   });
   var $hearerTop = $('header .top');
+  var $toTop = $('#toTop');
 
   window.onscroll = function () {
     var scrollTop = document.body.scrollTop ? document.body.scrollTop : document.documentElement.scrollTop;
@@ -33,15 +34,28 @@
         left: '0',
         right: '0',
         margin: '0 auto',
-        background: 'rgba(255, 255, 255, 0.5)',
+        background: 'rgba(255, 255, 255, 0.9)',
+        boxShadow: '0 0 5px 2px #ddd',
         width: '1280px',
         zIndex: '10'
+      });
+      $toTop.css({
+        display: 'block'
       });
     } else {
       $hearerTop.css({
         position: 'relative',
-        background: 'none'
+        background: 'none',
+        boxShadow: 'none'
+      });
+      $toTop.css({
+        display: 'none'
       });
     }
   };
+
+  $toTop.on('click', function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
 })();

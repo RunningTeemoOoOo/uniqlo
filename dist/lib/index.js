@@ -159,6 +159,20 @@
     pointersEvent();
   }
 
+  function views() {
+    var $titleNav = $('main .views .view .title_nav');
+    var $goods = $('main .views .view .goods');
+    var thisIndex;
+    $titleNav.children('li').on('click', function () {
+      $(this).parent().children('li').removeClass('focus');
+      $(this).addClass('focus');
+      thisIndex = $(this).index();
+      $(this).parent().siblings('.goods').children('li').removeClass('focus');
+      $($(this).parent().siblings('.goods').children('li')[thisIndex]).addClass('focus');
+    });
+  }
+
   noticeCarouse();
   bigCarouse();
+  views();
 })();

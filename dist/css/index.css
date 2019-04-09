@@ -338,6 +338,15 @@ header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul li:hover a {
   color: white;
 }
 
+#toTop {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 3px 3px #ccc;
+}
+
 main .notice_carousel {
   overflow: hidden;
   position: relative;
@@ -474,4 +483,59 @@ main .smallNav ul li .smallNav_navs span:first-of-type {
 
 main .smallNav ul li:last-of-type p {
   border: none;
+}
+
+main .views .view {
+  height: 1396px;
+  margin-bottom: 52px;
+}
+
+main .views .view .title_nav li {
+  width: 320px;
+  height: 76px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada;
+  float: left;
+  text-align: center;
+  padding-top: 30px;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+
+main .views .view .title_nav li span {
+  display: inline-block;
+  line-height: 16px;
+  font-size: 16px;
+  padding-bottom: 23px;
+  width: 100%;
+  border-bottom: 3px solid white;
+  color: #ababab;
+}
+
+main .views .view .title_nav li span:hover {
+  color: black;
+}
+
+main .views .view .title_nav li.focus span {
+  color: black;
+  border-color: #378694;
+}
+
+main .views .goods {
+  position: relative;
+}
+
+main .views .goods li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+main .views .goods li .goodsB {
+  margin-top: 30px;
+}
+
+main .views .goods li.focus {
+  display: block;
 }
