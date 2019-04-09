@@ -24,7 +24,6 @@ function js() {
     .pipe(babel({
         presets:['@babel/env']
     }))
-    .pipe(concat('output.js'))
     .pipe(gulp.dest('./dist/lib'))
 }
 function lib() {
@@ -60,6 +59,7 @@ function sprite() {
 }
 
 function watch() {
+    livereload.listen();
     gulp.watch('./src/index.html', index)
     gulp.watch('./src/resource/img/**/*.{jpg,gif,png,jpeg}', img)
     gulp.watch('./src/js/*.js', js)
@@ -69,8 +69,20 @@ function watch() {
     gulp.watch('./src/html/*.html', html)
     gulp.watch('./src/resource/icons/**/*.png', sprite)
     gulp.watch('./src/css/iconfont/*.*', iconfont)
+    gulp.watch(['./dist/**']).on('change', livereload.changed)
+}
+function server() {
+    connect.server({
+        root:'./dist',
+        livereload:true
+    })
 }
 
 const build = gulp.series(clean, index, img, js, lib, compileSass, style, html, sprite, iconfont)
-gulp.task('build', build)
-gulp.task('watch', watch)
+gulp.task('build', build);
+gulp.task('watch', function() {
+    livereload.listen();
+    gulp.watch(['./dist/**']).on('change', livereload.changed)
+})
+gulp.task('server', server);
+gulp.task('default', gulp.parallel(watch, server));
