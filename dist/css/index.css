@@ -337,3 +337,32 @@ header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul li:hover {
 header .sec_list .sec_list_ul .sec_list_right .sec_list_part ul li:hover a {
   color: white;
 }
+
+main .notice_carousel {
+  position: relative;
+  background: #fe0000;
+  height: 50px;
+}
+
+main .notice_carousel ul {
+  position: absolute;
+}
+
+main .notice_carousel ul li {
+  width: 1170px;
+  float: left;
+}
+
+main .notice_carousel .notice_carousel_btn {
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+}
+
+main .notice_carousel .notice_carousel_btn:first-of-type {
+  left: 0;
+}
+
+main .notice_carousel .notice_carousel_btn:last-of-type {
+  right: 0;
+}
