@@ -1,12 +1,13 @@
 const gulp = require('gulp')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')               //sass
 const del = require('del')                      //删除
 const concat = require('gulp-concat')           //连接文件
-//const uglify = require('gulp-uglify')           //压缩
+//const uglify = require('gulp-uglify')         //压缩
 const babel = require('gulp-babel')             //ES6转ES5
 const spritesmith = require('gulp.spritesmith') //转雪碧图
-const connect = require('gulp-connect')
-const livereload = require('gulp-livereload')
+const connect = require('gulp-connect')         //服务器
+const livereload = require('gulp-livereload')   //自动刷新
+const proxy = require('http-proxy-middleware')  //反向代理
 
 function clean() {
     return del(['dist'])
@@ -74,7 +75,17 @@ function watch() {
 function server() {
     connect.server({
         root:'./dist',
-        livereload:true
+        livereload:true,
+        prot: 8080,
+        // 转向apache服务器
+        middleware: function (connect, opt) {
+            return [
+                proxy('/UNIQLO/api', {
+                    target: 'http://localhost:8888',
+                    changeOrigin:true
+                })
+            ]
+        }
     })
 }
 

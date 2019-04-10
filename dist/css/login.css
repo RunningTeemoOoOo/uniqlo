@@ -437,195 +437,117 @@ footer .wbrecords .imgrecords img {
   height: 30px;
 }
 
-main .notice_carousel {
-  overflow: hidden;
-  position: relative;
-  background: #fe0000;
-  height: 50px;
+main .title {
+  height: 60px;
   margin-top: 28px;
+  background: #f4f4f4;
 }
 
-main .notice_carousel ul {
-  position: absolute;
-  transition: .5s;
+main .title span {
+  padding-left: 6px;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
-main .notice_carousel ul li {
-  width: 1170px;
-  float: left;
-}
-
-main .notice_carousel .notice_carousel_next {
-  position: absolute;
-  top: 5px;
-  cursor: pointer;
-  right: 0;
-  z-index: 5;
-  background: #fe0000;
-}
-
-main .notice_carousel .notice_carousel_prev {
-  position: absolute;
-  top: 5px;
-  cursor: pointer;
-  left: 0;
-  z-index: 5;
-  background: #fe0000;
-}
-
-main .carousel {
-  margin-top: 8px;
-  height: 622px;
-  position: relative;
-}
-
-main .carousel .ulList {
-  height: 570px;
-  overflow: hidden;
-  position: relative;
-}
-
-main .carousel .ulList .list {
-  position: absolute;
-  transition: .5s;
-  width: 10240px;
-  left: -1280px;
-}
-
-main .carousel .ulList .list li {
-  float: left;
-  width: 1280px;
-}
-
-main .carousel .carousel_prev {
-  position: absolute;
-  z-index: 5;
-  top: 260px;
-  left: -32px;
-  cursor: pointer;
-}
-
-main .carousel .carousel_next {
-  position: absolute;
-  z-index: 5;
-  top: 260px;
-  right: -32px;
-  cursor: pointer;
-}
-
-main .carousel .pagination {
-  width: 120px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 16px;
+main .registerForm {
+  width: 480px;
   margin: 0 auto;
+  padding: 40px 0;
 }
 
-main .carousel .pagination li {
-  height: 8px;
-  width: 8px;
+main .registerForm ul li {
+  border-bottom: 1px solid #dadada;
+  height: 76px;
+}
+
+main .registerForm ul li .liTitle {
+  font-size: 12px;
+  padding-top: 22px;
+  padding-bottom: 6px;
+}
+
+main .registerForm ul li .liTitle .alert {
+  color: red;
+  padding-left: 10px;
+}
+
+main .registerForm ul li input {
+  outline: none;
+  border: none;
+  background: none;
+  height: 20px;
+  width: 400px;
+  padding-left: 5px;
+}
+
+main .registerForm ul li input[type=checkbox] {
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: #d1d1d1;
-  margin: 0 6px;
-  float: left;
-  cursor: pointer;
 }
 
-main .carousel .pagination li.focus {
-  background: #606060;
+main .registerForm ul li span {
+  font-size: 12px;
 }
 
-main .smallNav {
-  height: 155px;
+main .registerForm ul li span a {
+  font-size: 12px;
+  color: #28788c;
+  padding: 0 5px;
 }
 
-main .smallNav ul li {
-  width: 320px;
-  box-sizing: border-box;
-  float: left;
+main .registerForm ul .locations {
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+  font-size: 12px;
+  border-color: #ababab;
 }
 
-main .smallNav ul li p {
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  margin-top: 29px;
-  border-right: 1px solid #dadada;
+main .registerForm ul .locations .location {
+  padding-left: 5px;
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+  font-size: 12px;
+  border-color: #ababab;
 }
 
-main .smallNav ul li .smallNav_navs {
-  text-align: center;
-  padding-top: 30px;
+main .registerForm ul .locations .locationNum {
+  padding-right: 25px;
 }
 
-main .smallNav ul li .smallNav_navs span {
-  margin-left: 20px;
-  padding: 5px 0;
-  border-bottom: 2px solid #dadada;
-  font-size: 10px;
-  line-height: 10px;
+main .registerForm ul .locations .xiasanjiao {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border: 10px solid white;
+  border-top-color: black;
+  position: absolute;
+  top: 14px;
+  right: 0;
 }
 
-main .smallNav ul li .smallNav_navs span:first-of-type {
-  margin-left: 0;
-}
-
-main .smallNav ul li:last-of-type p {
+main .registerForm ul .check-protocol {
+  height: 56px;
+  line-height: 56px;
   border: none;
 }
 
-main .views .view {
-  height: 1396px;
-  margin-bottom: 52px;
+main .registerForm ul .sub {
+  height: 52px;
+  border: none;
 }
 
-main .views .view .title_nav li {
-  width: 320px;
-  height: 76px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #dadada;
-  float: left;
-  text-align: center;
-  padding-top: 30px;
+main .registerForm ul .sub input[type=submit] {
   cursor: pointer;
-  margin-bottom: 28px;
-}
-
-main .views .view .title_nav li span {
-  display: inline-block;
-  line-height: 16px;
-  font-size: 16px;
-  padding-bottom: 23px;
-  width: 100%;
-  border-bottom: 3px solid white;
-  color: #ababab;
-}
-
-main .views .view .title_nav li span:hover {
-  color: black;
-}
-
-main .views .view .title_nav li.focus span {
-  color: black;
-  border-color: #378694;
-}
-
-main .views .goods {
-  position: relative;
-}
-
-main .views .goods li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-main .views .goods li .goodsB {
-  margin-top: 30px;
-}
-
-main .views .goods li.focus {
-  display: block;
+  height: 52px;
+  border: none;
+  text-align: center;
+  line-height: 52px;
+  color: white;
+  font-size: 12px;
+  background: #dadada;
 }
