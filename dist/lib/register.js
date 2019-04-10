@@ -19,6 +19,7 @@
       isTelT = true;
       $tel.siblings().children().html('');
     } else {
+      isTelT = false;
       $tel.siblings().children().html('请输入正确的手机号');
     }
 
@@ -33,6 +34,7 @@
       $passwd.siblings().children().html(''); //////AJAX
     } else {
       $passwd.siblings().children().html('输入密码格式不正确');
+      isPasswdT = false;
     }
 
     change();
@@ -46,6 +48,7 @@
       $passwdc.siblings().children().html('');
     } else {
       $passwdc.siblings().children().html('两次密码输入不一致');
+      isPasswdCT = false;
     }
 
     change();
@@ -73,6 +76,7 @@
         success: function success(data) {
           if (JSON.parse(data).result) {
             alert('注册成功');
+            window.location.href = './../index.html';
           } else {
             alert('注册失败');
           }
@@ -91,6 +95,10 @@
     if (isTelT && isPasswdT && isPasswdCT && isCheckT) {
       $sub.css({
         background: '#28788c'
+      });
+    } else {
+      $sub.css({
+        background: '#dadada'
       });
     }
   }
