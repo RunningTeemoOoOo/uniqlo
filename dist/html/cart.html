@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登陆</title>
+    <title>购物车</title>
     <link rel="stylesheet" href="./../css//iconfont/iconfont.css">
-    <link rel="stylesheet" href="./../css/login.css">
+    <link rel="stylesheet" href="./../css/cart.css">
 </head>
 <body>
     <header class="container">
@@ -764,50 +764,27 @@
             </ul>
         </div>
     </header>
-    <main class="container clear">
-        <div class="title">
-            <span>用户登陆</span>
-        </div>
-        <div class="loginForm l">
-            <ul>
-                <li class="Bigtitle">
-                    <span>动态验证码登陆</span>
-                </li>
-                <li class="inform">
-                    <span>如果您已经是优衣库会员，请使用动态验证码登录</span>
-                </li>
-                <li class="locations clear">
-                    <div class="location l">中国大陆</div>
-                    <div class="locationNum r">+86</div>
-                    <span class="xiasanjiao"></span>
-                </li>
-                <li class="telNum">
-                    <div class="liTitle">
-                        手机号<span class="alert"></span>
-                    </div>
-                    <input type="text" name="tel" placeholder="请输入手机号">
-                </li>
-                <li class="vCode">
-                    <div class="liTitle">
-                        验证码<span class="alert"></span>
-                    </div>
-                    <input type="text" placeholder="请输入验证码">
-                </li>
-                <li class="passWD">
-                    <div class="liTitle">
-                        密码<span class="alert"></span>
-                    </div>
-                    <input type="password" placeholder="请输入密码">
-                </li>
-                <li class="sub">
-                    <input type="submit" value="登陆">
-                </li>
-            </ul>
-        </div>
-        <div class="register r">
-            <div class="registerCont">
-                <div class="bigTitle">用户注册</div>
-                <div class="registerbtn"><a href="./../html/register.html">新用户注册</a></div>
+    <main class="container">
+        <table class="cart">
+            <thead>
+                <tr>
+                    <th><label><input type="checkbox"></label></th>
+                    <th>配送方式</th>
+                    <th>商品信息</th>
+                    <th>价格</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <div class="cartBtn contaoner clear">
+            <div class="r clear">
+                <div class="all l">总价（不含运费）：￥<span>0</span></div>
+                <div class="sub l">立即结算</div>
             </div>
         </div>
     </main>
@@ -873,6 +850,6 @@
 
     <script src="./../lib/jquery/jquery-3.3.1.js"></script>
     <script src="./../lib/common.js"></script>
-    <script src="./../lib/login.js"></script>
+    <script src="./../lib/cart.js"></script>
 </body>
 </html>
