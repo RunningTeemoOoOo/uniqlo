@@ -15,9 +15,25 @@
     var tel = $tel.val();
 
     if (telReg.test(tel)) {
-      ////////AJAX
-      isTelT = true;
-      $tel.siblings().children().html('');
+      $.ajax({
+        method: 'POST',
+        url: './../UNIQLO/api/checkUser.php',
+        data: {
+          tel: "".concat(tel)
+        },
+        success: function success(data) {
+          if (JSON.parse(data).result) {
+            isTelT = false;
+            $tel.siblings().children().html('手机号已存在');
+          } else {
+            isTelT = true;
+            $tel.siblings().children().html('');
+          }
+        },
+        error: function error(xhr) {
+          console.log(xhr);
+        }
+      });
     } else {
       isTelT = false;
       $tel.siblings().children().html('请输入正确的手机号');
@@ -31,7 +47,7 @@
 
     if (passwdReg.test(passwd)) {
       isPasswdT = true;
-      $passwd.siblings().children().html(''); //////AJAX
+      $passwd.siblings().children().html('');
     } else {
       $passwd.siblings().children().html('输入密码格式不正确');
       isPasswdT = false;
