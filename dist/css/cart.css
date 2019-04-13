@@ -113,6 +113,7 @@ header .top ul li:last-of-type {
   border-bottom: 1px solid #ababab;
   padding-left: 0;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 header .top ul li:last-of-type span {
@@ -502,6 +503,8 @@ main table td a:hover {
 main table td img {
   display: block;
   float: left;
+  height: 80px;
+  width: 80px;
 }
 
 main table td span {

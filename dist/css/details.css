@@ -113,6 +113,7 @@ header .top ul li:last-of-type {
   border-bottom: 1px solid #ababab;
   padding-left: 0;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 header .top ul li:last-of-type span {
@@ -441,6 +442,10 @@ main {
   padding-top: 50px;
 }
 
+main .detailsMain {
+  position: relative;
+}
+
 main .detailsMain .list {
   margin: 0 30px;
   width: 80px;
@@ -475,33 +480,44 @@ main .detailsMain .view img {
 main .detailsMain .view .float {
   height: 250px;
   width: 250px;
-  background: black;
   position: absolute;
-  opacity: 0.5;
   left: 0;
   top: 0;
   display: none;
+  background: none;
+  opacity: 0.5;
+  border: solid  black;
 }
 
 main .detailsMain .view .mask {
+  background: black;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  opacity: 0;
+  cursor: move;
 }
 
 main .detailsMain .magnify {
   height: 500px;
   width: 500px;
-  margin-left: 30px;
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 670px;
+  z-index: -1;
 }
 
 main .detailsMain .magnify img {
   position: relative;
   height: calc(500px * 2);
   display: none;
+}
+
+main .detailsMain .detal {
+  height: 500px;
+  width: 600px;
 }

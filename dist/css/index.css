@@ -113,6 +113,7 @@ header .top ul li:last-of-type {
   border-bottom: 1px solid #ababab;
   padding-left: 0;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 header .top ul li:last-of-type span {
